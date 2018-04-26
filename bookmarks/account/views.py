@@ -25,3 +25,9 @@ def user_login(request):
     else:
         form = LoginForm()
     return render(request,'account/login.html', {'form': form})
+
+
+# view to display dashboard when user login in to his account
+@login_required
+def dashboard(request):
+    return render(request, 'account/dashboard.html', {'section': 'dashboard'})
