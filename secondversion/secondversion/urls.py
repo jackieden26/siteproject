@@ -21,10 +21,10 @@ from account import views as account_views
 
 urlpatterns = [
     url(r'^$',account_views.index,name='index'),
-    url(r'^login/$', auth_views.userlogin, name='login'),
-    url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
+    url(r'^login/$', account_views.login_user, name='login'),
+#    url(r'^logout/$', account_views.logout, {'next_page': '/'}, name='logout'),
     # change a little, {'next_page': '/'},
-    url(r'^testcombine/$', auth_views.signupandlogin    )
+    url(r'^testcombine/$', account_views.signupandlogin),
     url(r'^signup/$', account_views.signup, name='signup'),
     url(r'^admin/', include(admin.site.urls)),
     # not sure to use include or not

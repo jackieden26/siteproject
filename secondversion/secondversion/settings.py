@@ -72,6 +72,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'secondversion.wsgi.application'
 
 
+AUTHENTICATION_BACKENDS = (
+# Needed to login by username in Django admin, regardless of allauth
+'django.contrib.auth.backends.ModelBackend',
+# allauth specific authentication methods, such as login by e-mail
+)
+
+
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
